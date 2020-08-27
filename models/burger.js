@@ -3,24 +3,23 @@ var orm = require("../config/orm.js");
 
 var burger = {
     selectAll: function(cb) {
-      orm.selectAll("tb_burger", function(res) {
-        cb(res);
-      });
+        orm.selectAll("burgers", function(res) {
+            cb(res);
+        });
     },
-    //Insert one burger into the table, with eaten = 0 (Not eaten)
+    //Insert one burger into the table, with devoured = 0 (Not devoured)
     insertOne: function(burgerName, cb) {
-      orm.insertOne("tb_burger", {burger_name: burgerName, eaten : 0}, function(res) {
-        cb(res);
-      });
+        orm.insertOne("burgers", { burger_name: burgerName, devoured: 0 }, function(res) {
+            cb(res);
+        });
     },
-    //Update one burger, according to the id provided, with eaten = 1 (Eaten)
-    updateAsEaten: function(idUpd, cb) {
-      orm.updateOne("tb_burger", {eaten: 1}, {id:idUpd}, function(res) {
-        cb(res);
-      });
+    //Update one burger, according to the id provided, with devoured = 1 (Devoured)
+    updateAsDevoured: function(idUpd, cb) {
+        orm.updateOne("burgers", { devoured: 1 }, { id: idUpd }, function(res) {
+            cb(res);
+        });
     }
-  };
-  
-  // Export the database functions for the controller (catsController.js).
-  module.exports = burger;
-  
+};
+
+// Export the database functions for the controller (catsController.js).
+module.exports = burger;

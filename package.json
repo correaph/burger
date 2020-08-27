@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/correaph/burger#readme",
   "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.1.0",
     "mysql": "^2.18.1"
   }
 }

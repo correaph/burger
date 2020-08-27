@@ -7,9 +7,9 @@ var connection = mysql.createConnection({
     user: 'PHMR',
     port: 3306,
     password: 'Udi07phMt!PHMR',
-    database: 'burger'
+    database: 'burgers_db'
 });
-connection.connect(function (err) {
+connection.connect(function(err) {
     if (err) {
         console.log("Error on connecting to MySQL: " + err.stack);
     }
