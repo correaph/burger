@@ -2,10 +2,15 @@
 $(function() {
     //Add burger submit event
     $(".add-burger").on("submit", function(event) {
+        var burgerName = $("#burger_name").val().trim();
+        if (!burgerName) {
+            alert("Burger name cannot be empty!");
+            return;
+        }
         // Prevent default on a submit event.
         event.preventDefault();
         var newBurger = {
-            burger_name: $("#burger_name").val().trim(),
+            burger_name: burgerName,
         };
         // Send the POST request.
         $.ajax("/api/burger/insertOne", {

@@ -1,31 +1,32 @@
 <h1>Burgers!</h1>
-<img src="/assets/img/burger.png">
 
-<h2>Burgers Available!</h2>
-
-<ul>
-  {{#each burgers}}
-    {{#unless devoured}}
+<div class="grid-container">
+  <ul class="grid-item">
+    <h2>Burgers Available!</h2>
+      {{#each burgers}}
+      {{#unless devoured}}
       {{> burgers/burger-block devoured=false}}
-    {{/unless}}
-  {{/each}}
-</ul>
-
-<h2>Devoured Burgers!</h2>
-
-<ul>
-  {{#each burgers}}
-    {{#if devoured}}
-      {{> burgers/burger-block devoured=true}}
-    {{/if}}
-  {{/each}}
-</ul>
-
-<h2>Add a Burger</h2>
-<form class="add-burger">
-  <div class="form-group">
-    <label for="burger_name">Burger Name:</label>
-    <input type="text" id="burger_name" name="name">
+      {{/unless}}
+      {{/each}}
+  </ul>
+  <div class="grid-item">
+    <div class="img-container">
+      <img src="/assets/img/burger.png">
+    </div>
+    <form class="add-burger">
+      <div class="form-group">
+        <label for="burger_name">Burger Name:</label>
+        <input type="text" id="burger_name" name="name">
+        <button type="submit">Add Burger</button>
+      </div>
+    </form>
   </div>
-  <button type="submit">Add Burger</button>
-</form>
+  <ul class="grid-item">
+    <h2>Devoured Burgers!</h2>
+      {{#each burgers}}
+      {{#if devoured}}
+      {{> burgers/burger-block devoured=true}}
+      {{/if}}
+      {{/each}}
+  </ul>
+</div>

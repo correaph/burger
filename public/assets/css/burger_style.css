@@ -1,19 +1,50 @@
-li {
+h1,
+h2,
+h3,
+.add-burger,
+.img-container {
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: #2196F3;
+    padding: 10px;
+}
+
+.grid-item {
     padding: 5px;
     margin: 5px;
-    background: #faebd7;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+}
+
+ul {
+    background-color: rgba(255, 255, 255, 0.8);
+    font-size: larger;
+}
+
+li {
+    margin: 15px;
+    list-style-type: circle;
 }
 
 .label {
     font-weight: bold;
 }
 
-.create-update-form {
+.add-burger {
     padding: 5px;
     margin: 5px;
-    background: aqua;
+    font-size: larger;
 }
 
 .form-group {
     margin-bottom: 5px;
+}
+
+button {
+    height: 20px;
 }
