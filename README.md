@@ -5,7 +5,7 @@
 This app demonstrates the use of express handlebars framework to develop a web application. The MVC (Model/View/Controller) were also applied in this project. 
 A customized ORM (Object-Relational Mapping) were created, instead of using a thirt-party module, such as sequelize.
 
-[Deployed App at Heroku](https://burger-correaph.herokuapp.com/
+[Deployed App at Heroku](https://burger-correaph.herokuapp.com/)
 
 [My GitHub Profile](https://github.com/correaph)
 
